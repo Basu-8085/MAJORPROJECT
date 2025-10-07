@@ -1,0 +1,12 @@
+<% layout("layouts/boilerplate.ejs") %>
+<body>
+    <h2>All Listings</h2>
+    <!-- <form method="get" action="/listings/create">
+        <BUTTON>Create Listing</BUTTON>
+    </form> -->
+        <ul>
+    <% for(let listing of allListings) { %>
+    <li><a href="/listings/<%= listing._id %>"><%= listing.title %></a></li>
+    <% } %>
+    </ul>
+</body>
