@@ -1,2 +1,2 @@
 # major project 
-add new file from other branch
+add new file from other branch.
