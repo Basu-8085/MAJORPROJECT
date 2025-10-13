@@ -37,8 +37,6 @@ app.put("/list/:id" , async (req,res) => {
     res.redirect(`/listings/${id}`)
 });
 
-
-
 app.get("/Listings" , async (req,res) => {
     const allListings = await list.find({});
     res.render("listings/index.ejs" , {allListings});

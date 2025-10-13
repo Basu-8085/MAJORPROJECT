@@ -1,20 +1,42 @@
 <% layout("layouts/boilerplate.ejs") %>
-<body>
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
     <h3>create Listings</h3>
     <form method="POST" action="/listings/create">
-        <input name="listing[title]" placeholder="WRITE A TITLE">
+        
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input name="listing[title]"  placeholder="TITLE" class="form-control">
+        </div>
+        
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea name="listing[description]" rows="4" placeholder="WRITE A DESCRIPTION" rows="8" cols="20" class="form-control"></textarea>
+        </div>
+        
+        <div class="mb-3">
+            <label for="image" class="form-label">Image URL</label>
+            <input name="listing[image]" placeholder="GIVE URL" class="form-control">
+        </div>
+        
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" name="listing[price]" placeholder="WRITE A PRICE" class="form-control">
+        </div>
+        
+        <div class="row ">
+        <div class="mb-3 col-md-8">
+            <label for="location" class="form-label">Location</label>
+            <input name="listing[location]" placeholder="WRITE A LOCATION" class="form-control">
+        </div>
+        
+        <div class="mb-3 col-md-4">
+            <label for="country" class="form-label">Country</label>
+            <input name="listing[country]" placeholder="WRITE COUNTRY" class="form-control">
+        </div>
+        </div>
+        
+        <button class="btn btn-dark add-btn">ADD</button>
         <br><br>
-        <textarea name="listing[description]" placeholder="WRITE A DESCRIPTION" rows="8" cols="20"></textarea>
-        <br><br>
-        <input  name="listing[image]" placeholder="It'a url">
-        <br><br>
-        <input type="number" name="listing[price]" placeholder="WRITE A PRICE">
-        <br><br>
-        <input  name="listing[location]" placeholder="WRITE A LOCATION">
-        <br><br>
-        <input  name="listing[country]" placeholder="WRITE COUNTRY">
-        <br><br>
-        <button>ADD</button>
     </form>
-</body>
-</html>
+    
